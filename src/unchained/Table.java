@@ -1,6 +1,7 @@
 package unchained;
 
 import java.lang.reflect.Field;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -8,6 +9,11 @@ import java.util.Arrays;
 public abstract class Table {
 
     private Database db;
+
+    private PreparedStatement insert;
+    private PreparedStatement select;
+    private PreparedStatement update;
+    private PreparedStatement delete;
 
     public Table(Database db) {
         this.db = db;
