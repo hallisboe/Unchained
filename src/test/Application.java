@@ -14,7 +14,6 @@ public class Application {
         db.initialize();
         System.out.println("------------------------------");
         db.borettslag.insert(new Object[] {0, "Kuleveien 1-3", 2, 2017, "Korettslaget"});
-        db.borettslag.drop();
         System.out.println("------------------------------");
         db.all();
         db.close();
